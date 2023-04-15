@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "icons";
+    src: url("../fonts/icons.ttf") format("woff"), url("../fonts/icons.woff2") format("woff2");
+    font-display: swap;
+    font-display: block;
+    font-style: normal;
+    font-weight: normal;
+  }
+  %ic {
+    font-family: "icons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-asx-font-smoothing: grasyscale;
+  }
+  
+  [class^="icon-"],
+  [class*="icon-"] {
+    &::before {
+      @extend %ic;
+      display: block;
+    }
+}
+
+.icon-tel:before {
+  content: "\e90a";
+}
+.icon-arrow:before {
+  content: "\e901";
+}
+.icon-adress:before {
+  content: "\e900";
+}
+.icon-git:before {
+  content: "\e902";
+}
+.icon-in:before {
+  content: "\e903";
+}
+.icon-inst:before {
+  content: "\e904";
+}
+.icon-lines:before {
+  content: "\e905";
+}
+.icon-link:before {
+  content: "\e906";
+}
+.icon-mail:before {
+  content: "\e907";
+}
+.icon-twitter:before {
+  content: "\e909";
+}
