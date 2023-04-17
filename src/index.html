@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    @@include('html/head.html', {
-        'title': 'Alex'
-    })
+@@include('html/head.html', {
+'title': 'Alex'
+})
+
 <body>
     <div class="wrapper">
         @@include('html/header.html')
@@ -13,54 +14,490 @@
                         <div class='about__container'>
                             <div class="about__body">
                                 <div class="about__content">
-                                    <div class="about__header header-section" data-anim>
+                                    <div class="about__header header-section">
                                         <div class="header-section__body">
                                             <div class="header-section__label">MY NAME IS</div>
-                                            <div class="header-section__title">Alex <span>Smith.</span></div>
+                                            <h1 class="header-section__title">Alex <span>Smith.</span></h1>
                                         </div>
                                     </div>
-                                    <div class="about__text" data-anim>
+                                    <div class="about__text">
                                         <p>
-                                            Creative front-end developer with more than +5 years of experience in enterprise companies and startups. Proficient in JavaScript, Angular, and React. Passionate about UI/UX
+                                            Creative front-end developer with more than +5 years of experience in
+                                            enterprise companies and startups. Proficient in JavaScript, Angular, and
+                                            React. Passionate about UI/UX
                                         </p>
                                     </div>
-                                    <ul class="about__social social-about" data-anim> 
+                                    <ul class="about__social social-about">
                                         <li class="social-about__item"><a href="" class="icon-inst"></a></li>
                                         <li class="social-about__item"><a href="" class="icon-git"></a></li>
                                         <li class="social-about__item"><a href="" class="icon-twitter"></a></li>
                                         <li class="social-about__item"><a href="" class="icon-in"></a></li>
                                     </ul>
                                 </div>
-                                <div class="about__picture picture-about" data-anim>
+                                <div class="about__picture picture-about">
                                     <div class="picture-about__body">
                                         <div class="picture-about__image">
-                                            <img src='@img/about/man.png' alt='man'>
+                                            <picture>
+                                                <source srcset='@img/about/man.webp' type='image/webp'>
+                                                <img src='@img/about/man.png' alt=''>
+                                            </picture>
                                         </div>
-                                        <div class="picture-about__decor"><img src='@img/icons/sprite.svg#lines' alt=''></div>
+                                        <div class="picture-about__decor">
+                                            <img src='@img/icons/sprite.svg#lines' alt=''>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="page__section">
+                <section class="page__section specialized">
                     <div class="section__content">
-
+                        <div class="specialized__container">
+                            <div class="specialized__header header-section">
+                                <div class="header-section__body">
+                                    <div class="header-section__label">SERVICES</div>
+                                    <h2 class="header-section__title">Specialized in</h2>
+                                </div>
+                            </div>
+                            <div class="specialized__row">
+                                <div class="specialized__item">
+                                    <div class="specialized__icon"><img src='@img/icons/sprite.svg#shape' alt='icon'>
+                                    </div>
+                                    <div class="specialized__title">UI/UX Design</div>
+                                    <div class="specialized__text">Turn what you have in mind of a digital product into
+                                        reality. For any platform you consider.</div>
+                                </div>
+                                <div class="specialized__item">
+                                    <div class="specialized__icon"><img src='@img/icons/sprite.svg#Icon' alt='icon'>
+                                    </div>
+                                    <div class="specialized__title">Application Development</div>
+                                    <div class="specialized__text">Standard designing, building, and implementing your
+                                        applications with documentation.
+                                    </div>
+                                </div>
+                                <div class="specialized__item">
+                                    <div class="specialized__icon"><img src='@img/icons/sprite.svg#shape-1' alt='icon'>
+                                    </div>
+                                    <div class="specialized__title">Web Development</div>
+                                    <div class="specialized__text">Create and maintain your websites and also take care
+                                        of its performance and traffic capacity.</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
-                <section class="page__section">
+                <section class="page__section portfolios">
                     <div class="section__content">
-
+                        <div class='portfolios__container'>
+                            <div class="portfolios__top">
+                                <div class="portfolios__header header-section">
+                                    <div class="header-section__body">
+                                        <div class="header-section__label">MY WORKS</div>
+                                        <h2 class="header-section__title">Featured Portfolios</h2>
+                                    </div>
+                                </div>
+                                <div class="portfolios__navigation">
+                                    <div class="portfolios__arrow portfolios__prev icon-arrow"></div>
+                                    <div class="portfolios__arrow portfolios__next icon-arrow"></div>
+                                </div>
+                            </div>
+                            <div class="portfolios__slider">
+                                <div class="portfolios__wrapper">
+                                    <div class="portfolios__slide">
+                                        <div class="portfolios__image">
+                                            <picture>
+                                                <source srcset='@img/portfolios/01.webp' type='image/webp'>
+                                                <img src='@img/portfolios/01.jpg' alt='portfolios'>
+                                            </picture>
+                                        </div>
+                                        <div class="portfolios__content">
+                                            <div class="portfolios__title">Support Center Website.</div>
+                                            <div class="portfolios__bottom">
+                                                <div class="portfolios__categories">
+                                                    <ul>
+                                                        <li>PHP</li>
+                                                    </ul>
+                                                </div>
+                                                <a href="" class="portfolios__link icon-link"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolios__slide">
+                                        <div class="portfolios__image">
+                                            <picture>
+                                                <source srcset='@img/portfolios/01.webp' type='image/webp'>
+                                                <img src='@img/portfolios/01.jpg' alt='portfolios'>
+                                            </picture>
+                                        </div>
+                                        <div class="portfolios__content">
+                                            <div class="portfolios__title">Agency Website.</div>
+                                            <div class="portfolios__bottom">
+                                                <div class="portfolios__categories">
+                                                    <ul>
+                                                        <li>WordPress</li>
+                                                        <li>WordPress</li>
+                                                        <li>WordPress</li>
+                                                        <li>WordPress</li>
+                                                    </ul>
+                                                </div>
+                                                <a href="" class="portfolios__link icon-link"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolios__slide">
+                                        <div class="portfolios__image">
+                                            <picture>
+                                                <source srcset='@img/portfolios/01.webp' type='image/webp'>
+                                                <img src='@img/portfolios/01.jpg' alt='portfolios'>
+                                            </picture>
+                                        </div>
+                                        <div class="portfolios__content">
+                                            <div class="portfolios__title">Support Center Website.</div>
+                                            <div class="portfolios__bottom">
+                                                <div class="portfolios__categories">
+                                                    <ul>
+                                                        <li>PHP</li>
+                                                    </ul>
+                                                </div>
+                                                <a href="" class="portfolios__link icon-link"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolios__slide">
+                                        <div class="portfolios__image">
+                                            <picture>
+                                                <source srcset='@img/portfolios/01.webp' type='image/webp'>
+                                                <img src='@img/portfolios/01.jpg' alt='portfolios'>
+                                            </picture>
+                                        </div>
+                                        <div class="portfolios__content">
+                                            <div href="" class="portfolios__title">Dashboard Website.</div>
+                                            <div class="portfolios__bottom">
+                                                <div class="portfolios__categories">
+                                                    <ul>
+                                                        <li>React</li>
+                                                    </ul>
+                                                </div>
+                                                <a href="" class="portfolios__link icon-link"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolios__slide">
+                                        <div class="portfolios__image">
+                                            <picture>
+                                                <source srcset='@img/portfolios/01.webp' type='image/webp'>
+                                                <img src='@img/portfolios/01.jpg' alt='portfolios'>
+                                            </picture>
+                                        </div>
+                                        <div class="portfolios__content">
+                                            <div class="portfolios__title">Support Center Website.</div>
+                                            <div class="portfolios__bottom">
+                                                <div class="portfolios__categories">
+                                                    <ul>
+                                                        <li>PHP</li>
+                                                    </ul>
+                                                </div>
+                                                <a href="" class="portfolios__link icon-link"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
-                <section class="page__section">
+                <section class="page__section experices">
                     <div class="section__content">
-
+                        <div class='experices__container' data-tabs>
+                            <div class="experices__top">
+                                <div class="experices__header header-section">
+                                    <div class="header-section__body">
+                                        <div class="header-section__label">career path</div>
+                                        <h2 class="header-section__title">Work Experices</h2>
+                                    </div>
+                                </div>
+                                <div class="experices__info">
+                                    <div class="experices__qualification experices-info-item">Front-end Developer <a href="">Apple .Inc</a>
+                                    </div>
+                                    <div class="experices__geolacation experices-info-item">California, United States</div>
+                                    <div class="experices__time experices-info-item">Nov 2020 - Present · Full-time</div>
+                                    <div class="portfolios__categories experices__categories experices-info-item">
+                                        <ul>
+                                            <li>Swift</li>
+                                            <li>Go</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="experices__tabs">
+                                <div class="experices__filter-titles">
+                                    <button type="button" class="experices__filter-title active icon-arrow"
+                                        data-filter="Apple">Apple</button>
+                                    <button type="button" class="experices__filter-title icon-arrow"
+                                        data-filter="Microsoft">Microsoft</button>
+                                    <button type="button" class="experices__filter-title icon-arrow"
+                                        data-filter="Facebook">Facebook</button>
+                                    <button type="button" class="experices__filter-title icon-arrow"
+                                        data-filter="Slack">Slack</button>
+                                </div>
+                                <div class="experices__items-tab">
+                                    <div class="experices__tab" data-filter-item="Apple">
+                                        <ul>
+                                            <li>Improving overall website performance for mobile users.</li>
+                                            <li>Collaborate with back-end developers and web designers to improve
+                                                usability
+                                            </li>
+                                            <li>Add voice search feature for mobile app.</li>
+                                            <li>Developing an admin panel to manage contents, users, products and ...
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="experices__tab" data-filter-item="Microsoft">
+                                        <ul>
+                                            <li>Improving overall website performance for mobile users.</li>
+                                            <li>Collaborate with back-end developers and web designers to improve
+                                                usability
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="experices__tab" data-filter-item="Facebook">
+                                        <ul>
+                                            <li>Improving overall website performance for mobile users.</li>
+                                            <li>Collaborate with back-end developers and web designers to improve
+                                                usability
+                                            </li>
+                                            <li>Add voice search feature for mobile app.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="experices__tab" data-filter-item="Slack">
+                                        <ul>
+                                            <li>Improving overall website performance for mobile users.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
-                <section class="page__section">
+                <section class="page__section blog">
                     <div class="section__content">
-
+                        <div class='blog__container'>
+                            <div class="blog__header header-section header-section_center">
+                                <div class="header-section__body">
+                                    <div class="header-section__label">MY ARTICLES</div>
+                                    <h2 class="header-section__title">Personal Blog</h2>
+                                </div>
+                            </div>
+                            <div class="blog__items">
+                                <article class="blog__item">
+                                    <div class="blog__image">
+                                        <picture>
+                                            <source srcset='@img/blog/01.webp' type='image/webp'>
+                                            <img src='@img/blog/01.jpg' alt='blog'>
+                                        </picture>
+                                    </div>
+                                    <div class="blog__content">
+                                        <h5 class="blog__title">How to prototype in figma
+                                        </h5>
+                                        <div class="blog__date">July 15, 2021
+                                        </div>
+                                        <div class="blog__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id magna nec ante scelerisque laoreet. Fusce finibus ...
+                                        </div>
+                                        <a href="" class="blog__link">Continue Reading </a>
+                                    </div>
+                                </article>
+                                <article class="blog__item">
+                                    <div class="blog__image">
+                                        <picture>
+                                            <source srcset='@img/blog/02.webp' type='image/webp'>
+                                            <img src='@img/blog/02.jpg' alt='blog'>
+                                        </picture>
+                                    </div>
+                                    <div class="blog__content">
+                                        <h5 class="blog__title">How to prototype in figma
+                                        </h5>
+                                        <div class="blog__date">July 15, 2021
+                                        </div>
+                                        <div class="blog__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
+                                        </div>
+                                        <a href="" class="blog__link">Continue Reading </a>
+                                    </div>
+                                </article>
+                                <article class="blog__item">
+                                    <div class="blog__image">
+                                        <picture>
+                                            <source srcset='@img/blog/03.webp' type='image/webp'>
+                                            <img src='@img/blog/03.jpg' alt='blog'>
+                                        </picture>
+                                    </div>
+                                    <div class="blog__content">
+                                        <h5 class="blog__title">How to prototype in figma
+                                        </h5>
+                                        <div class="blog__date">July 15, 2021
+                                        </div>
+                                        <div class="blog__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id magna nec ante scelerisque laoreet. Fusce finibus ...
+                                        </div>
+                                        <a href="" class="blog__link">Continue Reading </a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="page__section clients">
+                    <div class="section__content">
+                        <div class='clients__container'>
+                            <div class="clients__header header-section">
+                                <div class="header-section__body">
+                                    <div class="header-section__label">MY CLIENTS</div>
+                                    <h2 class="header-section__title">Testimonials</h2>
+                                </div>
+                            </div>
+                            <div class="clients__row">
+                                <div class="clients__item">
+                                    <div class="clients__icon">
+                                        <picture>
+                                            <source srcset='@img/clients/01.webp' type='image/webp'>
+                                            <img src='@img/clients/01.jpg' alt='client'>
+                                        </picture>
+                                    </div>
+                                    <div class="clients__text">We were very pleased to hear how you resolved
+                                    </div>
+                                    <div class="clients__name">Amelia Miller</div>
+                                    <div class="clients__job">Designer</div>
+                                </div>
+                                <div class="clients__item">
+                                    <div class="clients__icon">
+                                        <picture>
+                                            <source srcset='@img/clients/02.webp' type='image/webp'>
+                                            <img src='@img/clients/02.jpg' alt='client'>
+                                        </picture>
+                                    </div>
+                                    <div class="clients__text">We were very pleased to hear how you resolved our website's user interface issues and challenges.
+                                    </div>
+                                    <div class="clients__name">Amelia Miller</div>
+                                    <div class="clients__job">Designer</div>
+                                </div>
+                                <div class="clients__item">
+                                    <div class="clients__icon">
+                                        <picture>
+                                            <source srcset='@img/clients/03.webp' type='image/webp'>
+                                            <img src='@img/clients/03.jpg' alt='client'>
+                                        </picture>
+                                    </div>
+                                    <div class="clients__text">We were very pleased to hear how you resolved our website's user interface issues and challenges.
+                                    </div>
+                                    <div class="clients__name">Amelia Miller</div>
+                                    <div class="clients__job">Designer</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="page__section skills">
+                    <div class="section__content">
+                        <div class='skills__container'>
+                            <div class="skills__header header-section">
+                                <div class="header-section__body">
+                                    <div class="header-section__label">LEARNING PATH</div>
+                                    <h2 class="header-section__title">Education & Skills</h2>
+                                </div>
+                            </div>
+                            <div class="skills__body">
+                                <ul class="skills__periods periods-skills">
+                                    <li class="periods-skills__period">
+                                        <h6 class="periods-skills__title">Kingston university
+                                        </h6>
+                                        <div class="periods-skills__text">Master's degree - Software Engineering</div>
+                                        <div class="periods-skills__time">2019 - 2021</div>
+                                    </li>
+                                    <li class="periods-skills__period">
+                                        <h6 class="periods-skills__title">Kingston university
+                                        </h6>
+                                        <div class="periods-skills__text">Master's degree - Software Engineering</div>
+                                        <div class="periods-skills__time">2019 - 2021</div>
+                                    </li>
+                                    <li class="periods-skills__period">
+                                        <h6 class="periods-skills__title">Kingston university
+                                        </h6>
+                                        <div class="periods-skills__text">Master's degree - Software Engineering</div>
+                                        <div class="periods-skills__time">2019 - 2021</div>
+                                    </li>
+                                </ul>
+                                <div class="skills__content">
+                                    <div class="skills__text">For 5+ years, I have been continuously learning in the field of front-end and experimenting with new technologies and frameworks, and here you can see a summary of my skills.</div>
+                                    <div class="skills__langs">
+                                        <div class="skills__lang skills-progress-item">
+                                            <div class="skills__lang-title">React</div>
+                                            <div class="skills__lang-progress">
+                                                <div class="skills__lang__procent" data-progress="80"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skills__lang skills-progress-item">
+                                            <div class="skills__lang-title">React</div>
+                                            <div class="skills__lang-progress">
+                                                <div class="skills__lang__procent" data-progress="60"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skills__lang skills-progress-item">
+                                            <div class="skills__lang-title">React</div>
+                                            <div class="skills__lang-progress">
+                                                <div class="skills__lang__procent" data-progress="30"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="page__section contacts">
+                    <div class="section__content">
+                        <div class='contacts__container'>
+                            <div class="contacts__body">
+                                <div class="contacts__form">
+                                    <form action="#">
+                                        <input type="text" name="name" placeholder="Name" class="form-item">
+                                        <input type="email" name="email" placeholder="Email" class="form-item">
+                                        <textarea name="message" placeholder="Message" class="form-item"></textarea>
+                                        <button type="submit" name="submit" class="form-item">Send Message</button>
+                                    </form>
+                                </div>
+                                <ul class="contacts__info info-contacts">
+                                    <li class="info-contacts__item">
+                                        <div class="info-contacts__icon icon-adress"></div>
+                                        <div class="info-contacts__body">
+                                            <div class="info-contacts__title">Adress</div>
+                                            <div class="info-contacts__text">3424 Layman Avenue, Fayetteville, NC</div>
+                                        </div>
+                                    </li>
+                                    <li class="info-contacts__item">
+                                        <div class="info-contacts__icon icon-tel"></div>
+                                        <div class="info-contacts__body">
+                                            <div class="info-contacts__title">Adress</div>
+                                            <div class="info-contacts__text">3424 Layman Avenue, Fayetteville, NC</div>
+                                        </div>
+                                    </li>
+                                    <li class="info-contacts__item">
+                                        <div class="info-contacts__icon icon-mail"></div>
+                                        <div class="info-contacts__body">
+                                            <div class="info-contacts__title">Adress</div>
+                                            <div class="info-contacts__text">3424 Layman Avenue, Fayetteville, NC</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <footer class="footer">
+                                <ul class="footer__social">
+                                    <li><a href="" class="icon-inst"></a></li>
+                                    <li><a href="" class="icon-git"></a></li>
+                                    <li><a href="" class="icon-twitter"></a></li>
+                                    <li><a href="" class="icon-in"></a></li>
+                                </ul>
+                                <div class="footer__bottom-text">© 2022  -  DevChapter</div>
+                            </footer>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -70,4 +507,5 @@
     </div>
     <script src="js/app.min.js"></script>
 </body>
+
 </html>

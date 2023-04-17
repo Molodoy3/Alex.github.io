@@ -4,20 +4,67 @@ export function delegationClick() {
     const targetElement = e.target;
 
     if (window.innerWidth > 767.98) {
-        if (targetElement.closest(".menu__body li")) {
-            const item = targetElement.closest(".menu__body li");
-            if (item.querySelector("ul")) {
-              item.classList.toggle("active");
-              e.preventDefault();
-            }
-          } else if (!targetElement.closest(".menu__body.active")) {
-            const item = document.querySelector(".menu__body li.active");
-            if (item) {
-              item.classList.remove("active");
-            }
-          }
+      if (targetElement.closest(".menu__body li")) {
+        const item = targetElement.closest(".menu__body li");
+        if (item.querySelector("ul")) {
+          item.classList.toggle("active");
+          e.preventDefault();
+        }
+      } else if (!targetElement.closest(".menu__body.active")) {
+        const item = document.querySelector(".menu__body li.active");
+        if (item) {
+          item.classList.remove("active");
+        }
+      }
     }
-    
+    //!Табы
+    if (targetElement.closest('[data-filter]')) {
+      const itemFilter = targetElement.closest('[data-filter]');
+      const filterValue = itemFilter.dataset.filter;
+      const tabs = itemFilter.closest('[data-tabs]');
+
+      tabs.querySelectorAll('[data-filter]').forEach(item => { item.classList.remove('active') });
+      /*             filterValue === "*" ? itemsGrid.arrange({ filter: `` }) : 
+                      itemsGrid.arrange({ filter: `[data-filter="${filterValue}"]` }) */
+      itemFilter.classList.add('active');
+      const tabsItems = tabs.querySelectorAll('[data-filter-item]');
+      const durationAnimation = 300;
+      if (filterValue === "*") {
+        tabsItems.forEach(item => {
+          if (item.style.position !== 'absolute') {
+            item.style.cssText = `opacity: 0;`;
+            setTimeout(() => {
+              item.style.cssText = `position: absolute;opacity: 0;top: 0;`;
+            }, durationAnimation);
+          }
+        });
+
+        setTimeout(() => {
+          tabsItems.forEach(item => {
+            item.style.cssText = ``;
+            setTimeout(() => { item.style.cssText = `opacity: 1;`; }, 100);
+          });
+        }, durationAnimation);
+      } else {
+        tabsItems.forEach(item => {
+          if (item.style.position !== 'absolute') {
+            item.style.cssText = `opacity: 0;`;
+            setTimeout(() => {
+              item.style.cssText = `position: absolute;opacity: 0;top: 0;`;
+            }, durationAnimation);
+          }
+        });
+        setTimeout(() => {
+          tabsItems.forEach(item => {
+            if (item.dataset.filterItem === filterValue) {
+              item.style.cssText = ``;
+              setTimeout(() => { item.style.cssText = `opacity: 1;`; }, 100);
+            }
+          });
+        }, durationAnimation);
+      }
+      e.preventDefault();
+    }
     //Открывание бургера
     if (targetElement.closest(".menu__icon")) {
       targetElement.closest(".menu__icon").classList.toggle("active");
@@ -63,4 +110,6 @@ export function headerScroll() {
       }
     });
   }
+
+
 }
