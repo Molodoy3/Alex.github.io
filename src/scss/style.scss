@@ -48,7 +48,7 @@ $maxWidthContainer: 1440; //ширина макета //?Заполнить
     --purple: #7E74F1;
     --light-purple: #F5F3FE;
     --medium-purple: #EAE6FE;
-    --font-plus-jakarta-sans: font-family: 'Plus Jakarta Sans', sans-serif;
+    --font-plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;
 }
 
 /*=============================================================================================================*/
@@ -344,7 +344,7 @@ body {
     &__title {
         opacity: 0;
         transform: translate(-100%, 0);
-        font-family: 'Plus Jakarta Sans';
+        font-family: var(--font-plus-jakarta-sans);
         font-weight: 700;
         @include adaptiv-value('font-size', 36, 25, 1);
         line-height: perc(45, 36);
@@ -508,7 +508,7 @@ body {
     }
 
     &__title {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: var(--font-plus-jakarta-sans);
         line-height: perc(20, 16);
         font-weight: 500;
     }
@@ -690,7 +690,7 @@ body {
     }
 
     &__title {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: var(--font-plus-jakarta-sans);
         font-weight: 500;
         line-height: perc(20, 16);
         @include adaptiv-value('margin-bottom', 16, 8, 1);
